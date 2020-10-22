@@ -1,0 +1,8 @@
+frontend > pip intall requests
+backend > pip install djangorestframework
+
+
+--------- api curl---------------
+curl http://127.0.0.1:8000/
+https://www.postman.com/
+---------------------------------

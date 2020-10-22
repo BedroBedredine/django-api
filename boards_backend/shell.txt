@@ -1,0 +1,19 @@
+
+>>> from boards.serializers import BoardSerializer
+>>> from boards.models import Board
+>>> board_serializer = BoardSerializer(data={'name':"test_board",'description':"test board serrial"})
+>>> board_serializer.is_valid()
+True
+>>> board_data = board_serializer.save()
+>>> board_data.pk
+3   
+>>> 
+
+
+update
+>>> board_serial = BoardSerializer(instance=board_data,data={'name':"update_board","description":"test_update"})
+>>> board_serial.is_valid()
+True
+>>> board_serial.save()
+<Board: update_board>
+>>> 
